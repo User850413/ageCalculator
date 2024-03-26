@@ -1,5 +1,7 @@
 :root {
-  --main: hsl(259, 100%, 65%);
+  --main-font: "Poppins", sans-serif;
+  --white: #fff;
+  --main-color: hsl(259, 100%, 65%);
   --off-white: hsl(0, 0%, 94%);
   --light-grey: hsl(0, 0%, 86%);
   --Smokey-grey: hsl(0, 1%, 44%);
@@ -9,7 +11,75 @@
 html {
   font-size: 10px;
 }
+body {
+  background-color: var(--off-white);
+  height: 100%;
+}
 
+/* 메인 */
+main.wrap {
+  background-color: var(--white);
+  position: relative;
+  margin: 200px auto;
+  width: max-content;
+  border-radius: 15px 15px 100px 15px;
+  padding: 60px 50px;
+}
+.inputs {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  row-gap: 10px;
+  column-gap: 20px;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--off-white);
+  padding-bottom: 40px;
+  padding-right: 180px;
+}
+.inputs > label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: inherit;
+}
+.inputs > input {
+  font-size: 3.2rem;
+  width: 150px;
+  border: 2px solid var(--off-white);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-family: var(--main-font);
+}
+.inputs > input::placeholder {
+  color: var(--light-grey);
+}
+
+button.btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: var(--main-color);
+  color: var(--white);
+  border-radius: 50px;
+  font-size: 2.5rem;
+  top: 160px;
+  right: 40px;
+}
+
+.result {
+  margin: 30px 0 0;
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--off-black);
+  line-height: 0.7;
+  font-style: italic;
+}
+.result > span {
+  color: var(--main-color);
+}
+
+/* 정보(푸터) */
 .attribution {
   display: flex;
   align-items: center;
