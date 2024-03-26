@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/688304f15c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/index.css" />
@@ -18,27 +22,35 @@
     <style></style>
   </head>
   <body>
-    <!--  -->
-    Day<!--  -->
-    DD<!--  -->
-    <!--  -->
-    Month<!--  -->
-    MM<!--  -->
-    <!--  -->
-    Year<!--  -->
-    YYYY<!--  -->
-    <!--  -->
-    -- years<!--  -->
-    -- months<!--  -->
-    -- days<!--  -->
-    <!--  -->
-    <div class="attribution">
+    <main class="wrap">
+      <div class="inputs">
+        <label for="day">Day</label>
+        <input type="number" name="day" id="day" placeholder="DD" />
+        <label for="month">Month</label>
+        <input type="number" name="month" id="month" placeholder="MM" />
+        <label for="year">Year</label>
+        <input type="number" name="year" id="year" placeholder="YYYY" />
+      </div>
+      <button class="btn"><i class="fa-solid fa-chevron-down"></i></button>
+      <div class="results">
+        <p class="result">
+          <span class="results__year"> -- years</span>
+        </p>
+        <p class="result">
+          <span class="results__month">-- months</span>
+        </p>
+        <p class="result">
+          <span class="results__day">-- days</span>
+        </p>
+      </div>
+    </main>
+    <footer class="attribution">
       Challenge by&nbsp;
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by &nbsp;
       <a href="https://github.com/User850413" target="_blank">최수형</a>.
-    </div>
+    </footer>
   </body>
 </html>
 
