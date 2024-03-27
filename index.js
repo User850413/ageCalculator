@@ -6,6 +6,7 @@ const year = document.querySelector("#year");
 const yearNow = new Date().getFullYear();
 const monthNow = new Date().getMonth() + 1;
 const dayNow = new Date().getDate();
+const today = new Date();
 const btn = document.querySelector(".btn");
 
 function Max(unit, num, min) {
@@ -33,13 +34,36 @@ function errFocus(unit) {
     unit.classList.add("err");
   }
 }
+let dayResult = 0;
+let monthResult = 0;
+let yearResult = 0;
+
 btn.addEventListener("click", () => {
-  const dayValue = day.value;
-  const monthValue = month.value;
-  const yearValue = year.value;
+  let dayValue = day.value;
+  let monthValue = month.value;
+  let yearValue = year.value;
   if (dayValue && monthValue && yearValue) {
-    errFocus();
-    console.log("success!");
+    if (yearValue == yearNow && monthValue > monthNow) {
+      monthValue = monthNow;
+      month.value = monthValue;
+      dayValue = dayNow;
+      day.value = dayValue;
+    } else if (
+      yearValue == yearNow &&
+      monthValue == monthNow &&
+      dayValue > dayNow
+    ) {
+      dayValue = dayNow;
+      day.value = dayValue;
+    } else {
+      errFocus();
+      // dayResult = dayValue;
+      // monthResult = monthValue - 1;
+      // yearResult = yearValue;
+      // theDay = new Date(yearResult, monthResult, dayResult);
+      // let interval = today.getTime() - theDay.getTime();
+      // let test = new Date(interval);
+    }
   } else if (!dayValue) {
     errFocus(day);
   } else if (!monthValue) {
