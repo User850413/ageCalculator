@@ -6,6 +6,7 @@
   --light-grey: hsl(0, 0%, 86%);
   --Smokey-grey: hsl(0, 1%, 44%);
   --off-black: hsl(0, 0%, 8%);
+  --err: rgb(255, 141, 165);
 }
 
 html {
@@ -53,6 +54,9 @@ main.wrap {
 }
 .inputs > input::placeholder {
   color: var(--light-grey);
+}
+.inputs > input.err {
+  border: 2px solid var(--err);
 }
 
 button.btn {

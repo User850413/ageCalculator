@@ -31,7 +31,7 @@ The third challenge I started with [Frontend Mentor](https://www.frontendmentor.
 
 ### 향후 주목할 분야(NOTABLE POINT)
 
-- box-sizing:border-box를 주지 않았을 시 패딩에 의해 의도했던 크기보다 커짐 (Contents will be larger than intended size by padding if `box-sizing:border-box` is not given)
+-
 
 ### 참고 링크(LINKS)
 
