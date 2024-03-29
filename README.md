@@ -50,7 +50,11 @@ The third challenge I started with [Frontend Mentor](https://www.frontendmentor.
   -[Poppins](https://fonts.google.com/specimen/Poppins)
 
 - ## 사용 모듈 (Modul Used)
+
   - [Day.js](https://day.js.org/)
+
+- ## 배포 (deploy)
+  - [Netlify link](https://jocular-kelpie-50a453.netlify.app/)
 
 ## 작성자(AUTHOR)
 
