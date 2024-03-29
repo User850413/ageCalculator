@@ -8,6 +8,9 @@ const monthNow = new Date().getMonth() + 1;
 const dayNow = new Date().getDate();
 const today = new Date();
 const btn = document.querySelector(".btn");
+const year_input = document.querySelector(".results__year");
+const month_input = document.querySelector(".results__month");
+const day_input = document.querySelector(".results__day");
 
 function Max(unit, num, min) {
   numLength = `${num}`;
@@ -57,12 +60,18 @@ btn.addEventListener("click", () => {
       day.value = dayValue;
     } else {
       errFocus();
-      // dayResult = dayValue;
-      // monthResult = monthValue - 1;
-      // yearResult = yearValue;
-      // theDay = new Date(yearResult, monthResult, dayResult);
-      // let interval = today.getTime() - theDay.getTime();
-      // let test = new Date(interval);
+      dayResult = dayValue;
+      monthResult = monthValue - 1;
+      yearResult = yearValue;
+      theDay = new Date(yearResult, monthResult, dayResult);
+      let interval = today.getTime() - theDay.getTime();
+      let result = dayjs(interval).format("YY-MM-DD");
+      let resultYear = result.split("-")[0] - 70;
+      let resultmonth = result.split("-")[1] - 1;
+      let resultDay = result.split("-")[2] - 1;
+      year_input.textContent = resultYear;
+      month_input.textContent = resultmonth;
+      day_input.textContent = resultDay;
     }
   } else if (!dayValue) {
     errFocus(day);
