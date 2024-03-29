@@ -21,21 +21,36 @@ The third challenge I started with [Frontend Mentor](https://www.frontendmentor.
 
 ### 스크린샷(SCREENSHOT)
 
+![thumbnail](./design/thumbnail.png)
+
 ## 내 작업(MY WORK)
 
 ### 사용한 것(WHAT I USE)
 
--
+- Day.js
+- Date 객체
+- validation
 
 ### 배운 점(WHAT I LEARN)
 
+- npm 모듈 사용에 대해 좀 더 알아봐야 할 것 같다
+- 모듈 사용 또한 cdn으로 불러올 수 있다
+- 유효성 평가 작성 시 고려해야 하는 것들
+
 ### 향후 주목할 분야(NOTABLE POINT)
 
--
+- 모듈 사용
+- 날짜 계산
+- 유효성 검사
 
 ### 참고 링크(LINKS)
 
 - ## 사용한 폰트 (Font Used)
+
+  -[Poppins](https://fonts.google.com/specimen/Poppins)
+
+- ## 사용 모듈 (Modul Used)
+  - [Day.js](https://day.js.org/)
 
 ## 작성자(AUTHOR)
 
