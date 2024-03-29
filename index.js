@@ -58,6 +58,8 @@ btn.addEventListener("click", () => {
     ) {
       dayValue = dayNow;
       day.value = dayValue;
+    } else if (yearValue.length < 4) {
+      errFocus(year);
     } else {
       errFocus();
       dayResult = dayValue;
@@ -65,8 +67,8 @@ btn.addEventListener("click", () => {
       yearResult = yearValue;
       theDay = new Date(yearResult, monthResult, dayResult);
       let interval = today.getTime() - theDay.getTime();
-      let result = dayjs(interval).format("YY-MM-DD");
-      let resultYear = result.split("-")[0] - 70;
+      let result = dayjs(interval).format("YYYY-MM-DD");
+      let resultYear = result.split("-")[0] - 1970;
       let resultmonth = result.split("-")[1] - 1;
       let resultDay = result.split("-")[2] - 1;
       year_input.textContent = resultYear;
